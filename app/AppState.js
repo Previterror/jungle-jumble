@@ -10,7 +10,7 @@ class ObservableAppState extends EventEmitter {
     new Jumble({
       title: 'Baby Jumble',
       difficulty: 'easy',
-      body: 'Fromage stinking bishop brie. Cheesecake cauliflower cheese edam taleggio cheesy feet jarlsberg brie monterey jack.',
+      body: 'Fromage',
       fastest: 35,
     })
   ]

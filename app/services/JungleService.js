@@ -3,13 +3,25 @@ import { Jumble } from "../models/Jungle.js";
 
 class JungleService {
   gameStart() {
+
+    console.log(AppState.activeJumble)
     AppState.activeJumble.start = new Date()
-    console.log('game started');
+    // console.log('game started', AppState.activeJumble.start);
   }
 
   gameStop() {
     AppState.activeJumble.stop = new Date()
-    // console.log(, 'ended at', jumbleTitle.stop);
+    // console.log('ended at', AppState.activeJumble.stop);
+    let fastest = AppState.activeJumble.fastest
+    let start = AppState.activeJumble.start
+    let stop = AppState.activeJumble.stop
+    let fastestTime = (stop - start) / 1000
+
+    AppState.activeJumble.fastest = fastestTime
+    // console.log('fastest time', fastestTime);
+
+
+    // console.log('fast', fastest);
   }
 
 

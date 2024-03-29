@@ -58,13 +58,15 @@ export class JungleController {
 
     try {
       event.preventDefault()
-      console.log('checking submission')
+      // console.log('checking submission')
       const gameSubmit = event.target
       const submitData = getFormData(gameSubmit)
-      console.log('submitted', submitData)
-
-
-      submitData.gameSubmit == AppState.activeJumble.body ? console.log('woop') : console.log('lose');
+      // console.log('submitted', submitData)
+      submitData.gameSubmit == AppState.activeJumble.body ? console.log('woop') : console.log('lose')
+      jungleService.gameStop()
+      console.log('active jumble', AppState.activeJumble);
+      this.drawActiveJumble()
+      this.drawJumbleList()
 
     } catch {
       console.error('[SUBMIT BROKEN]');
